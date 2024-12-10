@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "tsx --env-file .env watch src/http/server.ts"
+    "dev": "tsx --env-file .env watch src/http/server.ts",
+    "dev:test": "tsx src/http/teste.ts"
   },
   "keywords": [],
   "author": "",
@@ -19,6 +20,7 @@
   "dependencies": {
     "drizzle-orm": "^0.36.4",
     "fastify": "^5.1.0",
+    "postgres": "^3.4.5",
     "zod": "^3.23.8"
   }
 }
