@@ -15,6 +15,13 @@
       "when": 1733934942564,
       "tag": "0001_parallel_tomas",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1733935274663,
+      "tag": "0002_quiet_selene",
+      "breakpoints": true
     }
   ]
 }

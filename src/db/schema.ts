@@ -5,6 +5,9 @@ export const activities = pgTable("activities", {
    id: text("id")
       .primaryKey()
       .$defaultFn(() => createId()),
+   userId: text("user_id")
+      .references(() => users.id)
+      .notNull(),
    title: text("title").notNull(),
    description: text("description"),
    timeStart: timestamp("time_start", { withTimezone: true }).notNull(),
