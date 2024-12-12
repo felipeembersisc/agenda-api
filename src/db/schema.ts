@@ -11,12 +11,10 @@ export const activities = pgTable("activities", {
    title: text("title").notNull(),
    description: text("description"),
    timeStart: timestamp("time_start", { withTimezone: true }).notNull(),
-   timeEnd: timestamp("time_end", { withTimezone: true }).notNull(),
+   timeEnd: timestamp("time_end", { withTimezone: true }),
    hasTimeToEnd: boolean("has_time_to_end").default(false),
    status: integer("status").default(0),
-   createdAt: timestamp("created_at", { withTimezone: true })
-      .notNull()
-      .defaultNow(),
+   createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
 })
 
 export const users = pgTable("users", {
@@ -26,7 +24,5 @@ export const users = pgTable("users", {
    name: text("name").notNull(),
    email: text("email").notNull(),
    active: boolean("active").default(true),
-   createdAt: timestamp("created_at", { withTimezone: true })
-      .notNull()
-      .defaultNow(),
+   createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
 })
